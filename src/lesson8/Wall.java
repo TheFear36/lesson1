@@ -6,7 +6,10 @@ public class Wall implements Challenge{
 
     @Override
     public void start (Participant participant){
-        participant.jump();
+        if (participant.getHeightJump() >= heightWall) {
+            System.out.println(participant + " перепрыгнул препятствие.");
+        }
+        System.out.println(participant + " не смог перепрыгнуть");
     }
 
 

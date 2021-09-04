@@ -4,8 +4,8 @@ public class Robot implements Participant {
 
     private final String name;
     private final String group = "Robot";
-    protected int distance;
-    protected int jumpHeight;
+    private final int distance;
+    private final int jumpHeight;
 
     public Robot(String name, int distance, int jumpHeight) {
         this.name = name;

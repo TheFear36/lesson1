@@ -7,7 +7,10 @@ public class Track implements Challenge {
 
     @Override
     public void start (Participant participant) {
-        participant.run();
+        if (participant.getDistance() >= distanceTrack) {
+            System.out.println(participant + " пробежал дистанцию.");
+        }
+        System.out.println(participant + "не смог пробежать");
     }
 
     public Track(int distanceTrack) {

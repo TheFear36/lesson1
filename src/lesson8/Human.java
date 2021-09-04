@@ -4,8 +4,8 @@ public class Human implements Participant {
 
     private final String name;
     private final String group = "Human";
-    protected int distance;
-    protected int jumpHeight;
+    private final int distance;
+    private final int jumpHeight;
 
     public Human(String name, int distance, int jumpHeight) {
         this.name = name;
