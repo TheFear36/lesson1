@@ -50,6 +50,7 @@ public class HomeWork11 {
         Box<Orange> box2 = new Box<>();
         Box<Orange> box3 = new Box<>();
         Box<Fruit> box4 = new Box<>();
+        Box<Apple> box5 = new Box<>();
         box1.put(apple);
         box1.put(apple2);
         box1.put(apple3);
@@ -78,6 +79,13 @@ public class HomeWork11 {
         box3.pourToAnotherBox(box4);
         System.out.println(box3.getWeight());
         System.out.println(box4.getWeight());
+
+        box3.compare(box1);
+
+        box5.addFruit(new Apple(), 5);
+
+        box1.compare(box5);
+
 
     }
 

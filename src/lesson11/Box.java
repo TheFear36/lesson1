@@ -22,7 +22,7 @@ public class Box <F extends Fruit> {
         }return boxWeight;
     }
 
-    public boolean compare(Box<Orange> anotherBox) {
+    public boolean compare(Box<? extends Fruit> anotherBox) {
         return this.getWeight() == anotherBox.getWeight();
     }
 
@@ -33,7 +33,7 @@ public class Box <F extends Fruit> {
     }
 
     public void addFruit(F fruit, int count) {
-        for (int i = 1; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             fruits.add(fruit);
         }
     }
