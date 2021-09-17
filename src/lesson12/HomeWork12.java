@@ -46,41 +46,42 @@ package lesson12;
 public class HomeWork12 {
 
     static final int SIZE = 10000000;
-    static final int HALF = SIZE / 2;
-    static float[] arr = new float[SIZE];
 
 
     public static void main(String[] args) {
 
-        for (float item : arr) {
-            item = 1;
-        }
-
-        firstMethod(arr);
-        secondMethod(arr);
+        firstMethod();
+        secondMethod();
 
     }
 
-    public static void firstMethod(float[] methodArr) {
+    public static void firstMethod() {
+        float[] arr = new float[SIZE];
+        fillingUno(arr);
 
         long time = System.currentTimeMillis();
 
-        formula(methodArr);
+        formula(arr);
 
         System.out.print("Linear counting: ");
         System.out.println(System.currentTimeMillis() - time);
 
     }
 
-    public static void secondMethod(float[] methodArr) {
+    public static void secondMethod() {
+
+        final int HALF = SIZE / 2;
+
+        float[] arr = new float[SIZE];
+        fillingUno(arr);
 
         float[] firstHalfArr = new float[HALF];
         float[] secondHalfArr = new float[HALF];
 
         long time = System.currentTimeMillis();
 
-        System.arraycopy(methodArr, 0 , firstHalfArr, 0 , HALF);
-        System.arraycopy(methodArr, 0 , secondHalfArr, 0 , HALF);
+        System.arraycopy(arr, 0 , firstHalfArr, 0 , HALF);
+        System.arraycopy(arr, HALF , secondHalfArr, 0 , HALF);
 
         MyThread threadOne = new MyThread(firstHalfArr);
         MyThread threadTwo = new MyThread(secondHalfArr);
@@ -95,13 +96,11 @@ public class HomeWork12 {
             e.printStackTrace();
         }
 
-
-        System.arraycopy(firstHalfArr, 0 , methodArr, 0, HALF);
-        System.arraycopy(secondHalfArr, 0 , methodArr, HALF, HALF);
+        System.arraycopy(firstHalfArr, 0 , arr, 0, HALF);
+        System.arraycopy(secondHalfArr, 0 , arr, HALF, HALF);
 
         System.out.print("Multi counting: ");
         System.out.println(System.currentTimeMillis() - time);
-
 
     }
 
@@ -118,6 +117,13 @@ public class HomeWork12 {
            formula(arr);
         }
 
+    }
+
+    static float[] fillingUno(float[] arr) {
+
+        for (float item : arr) {
+            item = 1;
+        } return arr;
 
     }
 
