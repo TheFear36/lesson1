@@ -26,8 +26,8 @@ public class HomeWork10 {
         String[] arr = {"Hello", "Hello", "World", "People", "World", "Witcher", "People", "Garry",
                 "People", "Animals", "Processor", "Work", "Jungle", "Back", "Hello"};
 
-        doTask1(arr);
-        doTask1_2(arr);
+       /* doTask1(arr);
+        doTask1_2(arr);*/
         doTask2();
 
     }
