@@ -118,7 +118,6 @@ public class HomeWork12 {
         }
 
     }
-
     static float[] fillingUno(float[] arr) {
 
         for (float item : arr) {
