@@ -1,11 +1,9 @@
 package lesson9;
 
 
+import lesson9.MyExceprion.NonNumericValueException;
 import lesson9.MyExceprion.MyArrayDataException;
 import lesson9.MyExceprion.MyArraySizeException;
-import lesson9.MyExceprion.NonNumericValueException;
-
-import java.util.Scanner;
 
 /**
  * Закомментированно интерактивное исправление ошибки вызванное неккоректным введением данных в массив
